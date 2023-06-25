@@ -74,7 +74,13 @@ width: 60vw;
 .texto-box{
     text-align: center;
 }
-@media only screen and (max-width: 900px) {       
+@media only screen and (max-width: 900px) {     
+    header {
+            height: 17vh;
+            background-color: rgb(12, 40, 64);
+            overflow: hidden;
+    
+        }
     .container-opcoes {
             font-size: 3vw;
     }
@@ -84,6 +90,7 @@ width: 60vw;
     padding: 0px;
     font-size: 3vw;
     text-align: center;
+    margin: 10px auto;
     }
   .container-box {
     width: 90%;
