@@ -29,15 +29,13 @@ width: 60vw;
     margin-right: 50px;
     display: flex;
     color: white;
-   
-    font-size: 1.5vw
+    font-size: 2vw;
 }
 .container-opcoes option{
     cursor: pointer;
     margin:10px;
 }
 .banner{
-    height: 80vh;
     overflow: hidden;
 }
 .banner img{
@@ -51,20 +49,22 @@ width: 60vw;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     padding: 80px;
+    margin: auto;
 }
 .container-titulo h1,h3{
     margin: 0px;
-    
     margin-bottom:10px ;
 }
 .container-box{
     display: flex;
     width: 90%;
-    margin: auto;
+    margin:  auto ;
+    padding: 5px;
 }
 .content-box {
     width: calc(100%/3);
     margin: 10px;
+    background-color: rgb(235, 233, 233);
     
 }
 .content-box img{
@@ -73,4 +73,30 @@ width: 60vw;
 }
 .texto-box{
     text-align: center;
+}
+@media only screen and (max-width: 900px) {       
+    .container-opcoes {
+            font-size: 3vw;
+    }
+  .container-titulo {
+
+    width: 80%;
+    padding: 0px;
+    font-size: 3vw;
+    text-align: center;
+    }
+  .container-box {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-box {
+    margin: 10px;
+    width: 100%;
+  }
+  .content-box img {
+      width: 100%;
+
+  }
 }
