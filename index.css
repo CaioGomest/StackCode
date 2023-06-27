@@ -40,6 +40,17 @@ header {
     margin: 10px;
 }
 
+.container-lineBurger {
+    display: none;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.container-lineBurger img {
+    display: none;
+    width: 10vw;
+}
+
 .banner {
     overflow: hidden;
 }
@@ -62,7 +73,7 @@ header {
 .container-titulo h1,
 .container-titulo h3 {
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .container-box {
@@ -77,15 +88,16 @@ header {
     margin: 10px;
     background-color: rgb(235, 233, 233);
 }
-
 .content-box img {
     width: 100%;
 }
-
 .texto-box {
     text-align: center;
+    padding: 10px;
 }
-
+.texto-box h1, h3{
+    margin: 0px;
+}
 @media only screen and (max-width: 900px) {
     header {
         height: 19vh;
@@ -117,20 +129,73 @@ header {
 
     .content-box {
         margin: 10px;
-        width: 100%;
+        width: 90%;
     }
 
     .content-box img {
         width: 100%;
     }
 }
-
 @media only screen and (max-width: 640px) {
     header {
         height: 13vh;
     }
-  .container-opcoes option {
-      display: none;
-  }
 
+    .container-opcoes option {
+        display: none;
+    }
+
+    .container-lineBurger {
+        display: block;
+    }
+
+    .container-lineBurger img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.sideBar{
+    height: 100vh;
+    width: 00vw;
+    background-color: rgb(12, 40, 64);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+.sideBar .close{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+.sideBar .close  h1{
+    position: absolute;
+    margin: 20px;
+    margin-right: 40px;
+    font-weight: 300;
+}
+.content-sideBar {
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sideBar a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5vw;
+
+}
+.sideBar hr{
+    width: 250%;
 }
