@@ -2,15 +2,22 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
- 
 }
-
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background-color: rgb(2, 40, 64);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 1px;
+}
 header {
     height: 20vh;
     background-color: rgb(12, 40, 64);
     overflow: hidden;
 }
-
 .container-header {
     height: 100%;
     width: 100%;
@@ -18,16 +25,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 .logo {
     width: 50%;
 }
-
 .logo img {
     max-width: 350px;
     width: 60vw;
 }
-
 .container-opcoes {
     margin: 10px;
     margin-right: 50px;
@@ -35,32 +39,26 @@ header {
     color: white;
     font-size: 2vw;
 }
-
 .container-opcoes option {
     cursor: pointer;
     margin: 10px;
 }
-
 .container-lineBurger {
     display: none;
     width: 60px;
     margin-right: 20px;
 }
-
 .container-lineBurger img {
     display: none;
     width: 10vw;
 }
-
 .banner {
     overflow: hidden;
 }
-
 .banner img {
     width: 100%;
     object-fit: cover;
 }
-
 .container-titulo {
     display: flex;
     justify-content: center;
@@ -123,7 +121,7 @@ header {
     }
 
     .container-box {
-        width: 90%;
+        width: 85%;
         flex-direction: column;
         align-items: center;
     }
@@ -199,4 +197,69 @@ header {
 }
 .sideBar hr{
     width: 250%;
+}
+.container-boxText{
+
+        display: flex;
+        width: 100%;
+        margin: auto;
+        padding: 10px 0px;
+        background-color: rgb(2, 40, 64);
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+}
+.boxText{
+    width: calc(100%/2);
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+ .text{
+    width: calc(70%/2);
+    text-align: start;
+    font-size: 1vw;
+}
+
+.boxText.box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+.element-grid{
+    background-color: black;
+    width: 250px;
+    height: 50%;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+@media only screen and (max-width: 900px){
+.text{
+    font-size: 1.5vw;
+    }
+}
+@media only screen and (max-width: 640px) {
+
+.container-boxText {
+    width: 100%;
+    flex-direction: column;
+    }
+.boxText {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    
+        }
+.text{
+    font-size: 2.5vw;
+    text-align: center;
+}
+    
 }
