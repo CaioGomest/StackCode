@@ -261,5 +261,12 @@ header {
     font-size: 2.5vw;
     text-align: center;
 }
+.element-grid {
+    width: calc(120%/2);
+    height: calc(120%/2);
+    margin: 10px;
+    font-size: 2.5vw;
+   
+}
     
 }
