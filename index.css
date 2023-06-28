@@ -233,7 +233,7 @@ header {
     align-items: center;
 }
 .element-grid{
-    background-color: black;
+    background-color: rgb(6, 21, 33);
     width: 250px;
     height: 50%;
     border-radius: 15px;
@@ -258,14 +258,14 @@ header {
     
         }
 .text{
-    font-size: 2.5vw;
+        font-size: 3vw;
     text-align: center;
 }
 .element-grid {
     width: calc(120%/2);
     height: calc(120%/2);
     margin: 10px;
-    font-size: 2.5vw;
+    font-size: 3vw;
    
 }
     
