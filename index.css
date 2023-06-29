@@ -165,6 +165,7 @@ header {
     align-items: center;
     overflow: hidden;
     text-align: center;
+    color: white;
 }
 .sideBar .close{
     width: 100%;
@@ -188,15 +189,31 @@ header {
 }
 .sideBar a{
     text-decoration: none;
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 5vw;
+    color: white;
 
 }
 .sideBar hr{
     width: 250%;
+}
+.animationContato{
+    transition: 1.5s;
+    display: block;
+    height: 0px;
+    position: relative;
+    overflow: hidden;   
+}
+.content-sideBar img{
+width: 15px;
+}
+.animationContato a{
+padding: 10px;
+border-radius: 15px;
+display: block;
+
 }
 .container-boxText{
 
@@ -222,27 +239,34 @@ header {
  .text{
     width: calc(70%/2);
     text-align: start;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .boxText.box-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 4vw;
     justify-items: center;
     align-items: center;
 }
 .element-grid{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(6, 21, 33);
-    width: 250px;
-    height: 50%;
+    width: 80%;
+    height: 70%;
     border-radius: 15px;
     text-align: center;
     padding: 20px;
+    font-size: 1.15em
+    
 }
 @media only screen and (max-width: 900px){
 .text{
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     }
 }
 @media only screen and (max-width: 640px) {
