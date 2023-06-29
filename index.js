@@ -9,7 +9,7 @@ btnContato.addEventListener("click", () => {
   if (animaContato.getAttribute("open") == "false") {
     animaContato.setAttribute("open", "open");
     animaContato.style.transition = ".5s";
-    animaContato.style.height = "130px";
+    animaContato.style.height = "160px";
   } else {
     animaContato.setAttribute("open", "false");
     animaContato.style.transition = ".5s";
