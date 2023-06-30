@@ -210,7 +210,8 @@ header {
     display: block;
     height: 0px;
     position: relative;
-    overflow: hidden;   
+    overflow: hidden;
+    bottom: 30px;   
 }
 .content-sideBar img{
 width: 15px;
