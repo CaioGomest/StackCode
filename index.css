@@ -2,7 +2,9 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden ;
 }
+
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -317,6 +319,75 @@ width: calc(100%/2);
 
 .container-grafico img {
     width: 30vw;
+    }   
 }
+.textDemo{
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.textDemo h1,h2{
+  margin: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+    .textDemo{
+    width: 80%;
+    padding: 0px;
+    font-size: 3vw;
+    text-align: center;
+    margin: 10px auto;
+}}
+.rodape{
+    color: white;
+    width: 100%;
+    background-color: rgb(2, 40, 64);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+.contatosContainer{
+    display: flex;
+    flex-direction: column;
+}
+.contatosContainer a{
+ color: white;
+ text-decoration: none;
+ margin: 5px;
+font-weight: bold;
+font-size: 1em;
+
+}
+.rodape-contatos img{
+width: 15px;
+
+}
+.rodape-endereço, .rodape-horario{
+
+    text-align: center;
     
+}
+.rodape h5{
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 640px) {
+
+.rodape {
+        color: white;
+        width: 99vw;
+        background-color: rgb(2, 40, 64);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .contatosContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

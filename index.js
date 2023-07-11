@@ -28,3 +28,16 @@ btnClose.addEventListener("click", () => {
   body.style.overflow = "visible";
   animaContato.style.height = "0px";
 });
+//efeito Parallax
+window.addEventListener("scroll", function () {
+  // Calcula a posição do scroll
+  var scrollPosition = window.pageYOffset;
+
+  // Aplica o efeito paralaxe às camadas
+  var parallaxLayers = document.querySelectorAll(".parallax-layer");
+  for (var i = 0; i < parallaxLayers.length; i++) {
+    var speed = parallaxLayers[i].getAttribute("data-speed");
+    parallaxLayers[i].style.transform =
+      "translateY(" + scrollPosition * speed + "px)";
+  }
+});
