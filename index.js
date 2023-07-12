@@ -29,15 +29,22 @@ btnClose.addEventListener("click", () => {
   animaContato.style.height = "0px";
 });
 //efeito Parallax
-window.addEventListener("scroll", function () {
-  // Calcula a posição do scroll
-  var scrollPosition = window.pageYOffset;
+document.addEventListener("DOMContentLoaded", function () {
+  var elementos = document.querySelectorAll(".elemento");
 
-  // Aplica o efeito paralaxe às camadas
-  var parallaxLayers = document.querySelectorAll(".parallax-layer");
-  for (var i = 0; i < parallaxLayers.length; i++) {
-    var speed = parallaxLayers[i].getAttribute("data-speed");
-    parallaxLayers[i].style.transform =
-      "translateY(" + scrollPosition * speed + "px)";
+  function verificaElementos() {
+    var alturaJanela = window.innerHeight;
+
+    elementos.forEach(function (elemento) {
+      var posicaoElemento = elemento.getBoundingClientRect().top;
+
+      if (posicaoElemento - alturaJanela <= 0) {
+        elemento.classList.add("animado");
+      }
+    });
   }
+
+  verificaElementos(); // Verifica se os elementos estão visíveis ao carregar a página
+
+  window.addEventListener("scroll", verificaElementos); // Verifica a cada rolagem
 });

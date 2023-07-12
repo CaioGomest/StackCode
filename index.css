@@ -1,19 +1,23 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow-x:hidden ;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;
+.elemento {
+    opacity: 0;
+    /* Inicialmente, o elemento está oculto */
+    transform: translateY(20px);
+    /* O elemento é deslocado para baixo */
+    transition: opacity 0.9s ease, transform 0.5s ease;
+    /* Transições suaves */
 }
-body::-webkit-scrollbar-track {
-    background-color: rgb(2, 40, 64);
-}
-body::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 1px;
+
+.elemento.animado {
+    opacity: 1;
+    /* O elemento é exibido gradualmente */
+    transform: translateY(0);
+    /* O elemento é reposicionado para a posição original */
 }
 header {
     height: 20vh;
@@ -162,6 +166,7 @@ header {
     }
 }
 .sideBar{
+    z-index: 99;
     height: 100vh;
     width: 00vw;
     background-color: rgb(12, 40, 64);
