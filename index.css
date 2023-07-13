@@ -2,23 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-}
-
-.elemento {
-    opacity: 0;
-    /* Inicialmente, o elemento está oculto */
-    transform: translateY(20px);
-    /* O elemento é deslocado para baixo */
-    transition: opacity 0.9s ease, transform 0.5s ease;
-    /* Transições suaves */
-}
-
-.elemento.animado {
-    opacity: 1;
-    /* O elemento é exibido gradualmente */
-    transform: translateY(0);
-    /* O elemento é reposicionado para a posição original */
-}
+    overflow-x: hidden;
+}   
 header {
     height: 20vh;
     background-color: rgb(12, 40, 64);
@@ -65,6 +50,34 @@ header {
     width: 100%;
     object-fit: cover;
 }
+.text-Banner{
+    position: absolute;
+    color: rgb(243, 243, 243);
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+    margin-left: 20px;
+    margin-top: 50px;
+
+    
+}
+.text-Banner h1,h3{
+    margin-left: 0px;
+   
+}
+.text-Banner h1 {
+font-size: 1.7em;
+}
+.text-Banner h3{
+    margin-top:0px ;
+    margin-bottom: 0px;
+    font-size: 1.4em;
+    line-height: 30px;
+}
 .container-titulo {
     display: flex;
     justify-content: center;
@@ -73,12 +86,17 @@ header {
     font-family: 'Montserrat', sans-serif;
     padding: 80px;
     margin: auto;
+    text-align: center;
 }
 
 .container-titulo h1,
 .container-titulo h3 {
     margin: 0px;
     margin-bottom: 5px;
+}
+.container-titulo h1{
+    margin-top:10px ;
+    margin-bottom: 10px;
 }
 
 .container-box {
@@ -103,8 +121,8 @@ header {
     text-align: center;
     padding: 10px;
 }
-.texto-box h1, h3{
-    margin: 0px;
+.texto-box h1 h3{
+    margin: 10px;
 }
 @media only screen and (max-width: 900px) {
     header {
@@ -124,7 +142,7 @@ header {
     .container-titulo {
         width: 80%;
         padding: 0px;
-        font-size: 3vw;
+        font-size: 1.7vw;
         text-align: center;
         margin: 10px auto;
     }
@@ -146,6 +164,17 @@ header {
         object-fit: fill;
         height: auto;
     }
+    .text-Banner {
+        display: none;
+    }
+    .text-Banner h3 {
+        font-size: 2em
+
+    }
+    .text-Banner h1 {
+        font-size: 2.3em
+    }
+
 }
 @media only screen and (max-width: 640px) {
     header {
@@ -330,6 +359,7 @@ width: calc(100%/2);
     margin: 20px;
     width: 100%;
     display: flex;
+    font-size: 1.5vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -342,7 +372,7 @@ width: calc(100%/2);
     .textDemo{
     width: 80%;
     padding: 0px;
-    font-size: 3vw;
+    font-size: 2vw;
     text-align: center;
     margin: 10px auto;
 }}
@@ -396,3 +426,5 @@ width: 15px;
     }
 
 }
+
+
