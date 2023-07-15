@@ -3,7 +3,21 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-}   
+}
+.elemento {
+    opacity: 0;
+    /* Inicialmente, o elemento está oculto */
+    transform: translateY(20px);
+    /* O elemento é deslocado para baixo */
+    transition: opacity 0.9s ease, transform 0.5s ease;
+    /* Transições suaves */
+}
+.elemento.animado {
+    opacity: 1;
+    /* O elemento é exibido gradualmente */
+    transform: translateY(0);
+    /* O elemento é reposicionado para a posição original */}
+    
 header {
     height: 20vh;
     background-color: rgb(12, 40, 64);
