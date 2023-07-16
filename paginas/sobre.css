@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+.elemento {
+    opacity: 0;
+    /* Inicialmente, o elemento está oculto */
+    transform: translateY(20px);
+    /* O elemento é deslocado para baixo */
+    transition: opacity 0.9s ease, transform 0.5s ease;
+    /* Transições suaves */
+}
+.elemento.animado {
+    opacity: 1;
+    /* O elemento é exibido gradualmente */
+    transform: translateY(0);
+    /* O elemento é reposicionado para a posição original */
+}
+header {
+    height: 10vw;
+    background-color: rgb(12, 40, 64);
+    overflow: hidden;
+}
+
+.container-header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo img {
+    max-width: 350px;
+    width: 60vw;
+}
+
+.container-opcoes {
+    margin: 10px;
+    margin-right: 50px;
+    display: flex;
+    color: white;
+    font-size: 2vw;
+}
+
+.container-opcoes a {
+    cursor: pointer;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.container-lineBurger {
+    display: none;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.container-lineBurger img {
+    display: none;
+    width: 10vw;
+}
+
+
+body h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*rodape------------*/
+.rodape {
+
+    color: white;
+    width: 100%;
+    background-color: rgb(2, 40, 64);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.contatosContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contatosContainer a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+.rodape-contatos img {
+    width: 15px;
+
+}
+
+.rodape-endereço,
+.rodape-horario {
+
+    text-align: center;
+
+}
+
+.rodape h5 {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .rodape {
+        color: white;
+        width: 99vw;
+        background-color: rgb(2, 40, 64);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contatosContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
