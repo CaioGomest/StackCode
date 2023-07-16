@@ -17,9 +17,9 @@ body {
     /* O elemento é exibido gradualmente */
     transform: translateY(0);
     /* O elemento é reposicionado para a posição original */}
-    
+
 header {
-    height: 20vh;
+    height: 10vw;
     background-color: rgb(12, 40, 64);
     overflow: hidden;
 }
@@ -387,13 +387,14 @@ width: calc(100%/2);
 .textDemo{
     margin: 20px;
     width: 100%;
+    margin-bottom: 0px;
     display: flex;
     font-size: 1.5vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.textDemo h1,h2{
+.textDemo h1,h3{
   margin: 5px;
 }
 
@@ -458,6 +459,7 @@ width: 15px;
 /*carrossel*/
 
 .carrosel{
+    overflow: hidden;
     width: 100%;
     height: 400px;
     display: flex;
@@ -480,7 +482,7 @@ li {
     user-select: none;
     z-index: 1;
     width: 100vw;
-
+height: 100%;
 }
 
 .items .item {
@@ -504,7 +506,7 @@ li {
 }
 
 .item.active {
-    width: 500px;
+    width: 550px;
     height: auto;
     opacity: 1;
     z-index: 99;
@@ -556,54 +558,48 @@ li {
 
 .button-container .button:nth-child(1) {
     float: left;
-    right: 226px;
+    right: 250px;
 }
 
 .button-container .button:nth-child(2) {
     float: right;
-    left: 226px;
+    left: 250px;
 }
 
 /*organizando o posicionamento do botão next e prev*/
 
-@media screen and (max-width: 750px) {
-.carrosel{
-        height: 300px;
-}
-.items{
-position: absolute;
-    user-select: none;
-    z-index: 1;
-    overflow: hidden;
-    width: 100vw;
-    height: 300px;
-}
-.item.active{
-    width: 85%;
-    height: auto;
-}
-.button-container .button:nth-child(1) {
-    float: left;
-    right: 120%;
-}
+@media only screen and (max-width: 640px) {
+    .carrosel{
+        height: 280px;
+    }
+.item.active {
+        width: 80%;
+    }
+    .item.prev {
+        height: 40vw;
+        transform: translate(-150%, -50%);
+    }
 
-.button-container .button:nth-child(2) {
-    float: right;
-    left:120%;
+    .item.next {
+        height: 40vw;
+        transform: translate(50%, -50%);
+    }
+     .items .button-container {
+        position: relative;
+        width: 100%;
+        z-index: 100;
+    }
+   .button-container .button:nth-child(1) {
+       float: left;
+       right: 35vw;
+   }
+
+   .button-container .button:nth-child(2) {
+       float: right;
+       left: 35vw;
+   }
+   .button img {
+       width: 30px;
+   }
+   
 }
-.item.next {
-    z-index: 2;
-    opacity: 0.55;
-    transform: translate(10%, -50%);
-    width: 75%;
-    height: auto;
-    
-}
-.item.prev {
-    z-index: 2;
-    opacity: 0.55;
-    transform: translate(-110%, -50%);
-    width: 75%;
-    height: auto;
-        
-}}
