@@ -12,14 +12,13 @@ body {
     transition: opacity 0.9s ease, transform 0.5s ease;
     /* Transições suaves */
 }
-.elemento.animado {
+.animado {
     opacity: 1;
-    /* O elemento é exibido gradualmente */
     transform: translateY(0);
-    /* O elemento é reposicionado para a posição original */
+    transition: opacity 0.9s ease, transform 0.5s ease;
 }
 header {
-    height: 10vw;
+    height: 15vh;
     background-color: rgb(12, 40, 64);
     overflow: hidden;
 }
@@ -63,15 +62,107 @@ header {
 }
 
 .container-lineBurger img {
-    display: none;
+    
     width: 10vw;
 }
-
-
 body h1{
     font-family: 'Montserrat', sans-serif;
 }
+.sobre{
+    text-align: center;
+    font-size: 1.2vw;
+    margin: 50px;
+}
+@media only screen and (max-width: 640px) {
+    .sobre{
+        font-size: 2.5vw;
+    }
+    .container-opcoes {
+        display: none;
+    }
+    .container-lineBurger {
+        display: block;
+        width: 60px;
+        margin-right: 20px;
+    }
 
+}
+/*sideBar*/
+.sideBar {
+    z-index: 99;
+    height: 100vh;
+    width: 00vw;
+    background-color: rgb(12, 40, 64);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-size: 6.5vw;
+}
+
+.sideBar .close {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+.closeX{
+    font-size: 5vw;
+}
+
+.sideBar .close h1 {
+    position: absolute;
+    margin: 20px;
+    margin-right: 40px;
+    font-weight: 300;
+}
+
+.content-sideBar {
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideBar a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+}
+
+.sideBar hr {
+    width: 250%;
+}
+
+.animationContato {
+    transition: 1.5s;
+    display: block;
+    height: 0px;
+    position: relative;
+    overflow: hidden;
+    bottom: 30px;
+}
+
+.content-sideBar img {
+    width: 15px;
+}
+
+.animationContato a {
+    padding: 10px;
+    border-radius: 15px;
+    display: block;
+
+}
 /*rodape------------*/
 .rodape {
 

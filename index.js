@@ -48,12 +48,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", verificaElementos); // Verifica a cada rolagem
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".carousel");
+  const slides = carousel.querySelectorAll(".slide");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(${100 * (i - index)}%)`;
+    });
+  }
+
+  function goToPrevSlide() {
+    currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+  }
+
+  function goToNextSlide() {
+    currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
+  }
+
+  prevButton.addEventListener("click", goToPrevSlide);
+  nextButton.addEventListener("click", goToNextSlide);
+});
+
 const slider = document.querySelector(".items");
 const slides = document.querySelectorAll(".item");
 const button = document.querySelectorAll(".button");
 
 let current = 0;
-let prev = slides.length - 1;
+let prev = 4;
 let next = 1;
 
 for (let i = 0; i < button.length; i++) {
@@ -63,8 +91,7 @@ for (let i = 0; i < button.length; i++) {
 const gotoPrev = () =>
   current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
 
-const gotoNext = () =>
-  current < slides.length - 1 ? gotoNum(current + 1) : gotoNum(0);
+const gotoNext = () => (current < 4 ? gotoNum(current + 1) : gotoNum(0));
 
 const gotoNum = (number) => {
   current = number;
@@ -77,12 +104,12 @@ const gotoNum = (number) => {
     slides[i].classList.remove("next");
   }
 
-  if (next == slides.length) {
+  if (next == 2) {
     next = 0;
   }
 
   if (prev == -1) {
-    prev = slides.length - 1;
+    prev = 4;
   }
 
   slides[current].classList.add("active");
