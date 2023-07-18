@@ -34,7 +34,8 @@ header {
     width: 50%;
 }
 .logo img {
-max-height: 10vw;
+    max-width: 350px;
+
 }
 .container-opcoes {
     margin: 10px;
@@ -695,7 +696,7 @@ height: 100%;
 
 .dropdown:hover .dropdown-content {
     visibility: visible;
-    height: 190px;
+    height: 190;
 
 }
 

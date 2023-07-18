@@ -36,9 +36,8 @@ header {
 }
 
 .logo img {
-    
- 
-    max-height: 10vw;
+    max-width: 350px;
+ ;
 }
 
 .container-opcoes {
