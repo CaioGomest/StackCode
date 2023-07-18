@@ -81,14 +81,14 @@ header {
     margin-left: 20px;
     margin-top: 50px;
 
-    
 }
 .text-Banner h1,h3{
     margin-left: 0px;
    
 }
 .text-Banner h1 {
-font-size: 1.7em;
+    font-size: 1.7em;
+
 }
 .text-Banner h3{
     margin-top:0px ;
@@ -158,7 +158,7 @@ font-size: 1.7em;
     header {
         height: 19vh;
         background-color: rgb(12, 40, 64);
-        overflow: hidden;
+       
     }
 
     .container-opcoes {
