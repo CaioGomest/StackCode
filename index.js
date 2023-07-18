@@ -144,3 +144,11 @@ next = current === slides.length - 1 ? 0 : current + 1;
 // Atualize os índices prev e next para lidar corretamente com o último slide
 prev = slides.length - 1;
 next = current + 1;
+
+// alteraçao do email para mobile
+
+var email = document.querySelector(".contato-email");
+if (window.matchMedia("(max-width: 900px)").matches) {
+  email.href = "mailto:stackcode.dev@gmail.com";
+  email.target = "_blank";
+}

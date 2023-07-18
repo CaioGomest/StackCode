@@ -21,7 +21,7 @@ body {
 header {
     height: 10vw;
     background-color: rgb(12, 40, 64);
-    overflow: hidden;
+   
 }
 .container-header {
     height: 100%;
@@ -35,7 +35,8 @@ header {
 }
 .logo img {
     max-width: 350px;
-    width: 60vw;
+
+    height: 10vw;
 }
 .container-opcoes {
     margin: 10px;
@@ -43,6 +44,7 @@ header {
     display: flex;
     color: white;
     font-size: 2vw;
+    align-items: center;
 }
 .container-opcoes a {
     cursor: pointer;
@@ -140,7 +142,11 @@ font-size: 1.7em;
 .texto-box h1 h3{
     margin: 10px;
 }
+
 @media only screen and (max-width: 900px) {
+    .email-desktop{
+        display: none;
+    }
     body h1 {
         font-size: 1.5rem;
     
@@ -603,5 +609,99 @@ height: 100%;
    .button img {
        width: 30px;
    }
-   
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropbtn {
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.dropdown-content {
+    width: 110%;
+    height: 0px;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(12, 40, 64);
+    border-radius: 10px;
+    transition: 0.4s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    align-items:center ;
+
+}
+
+.conteudo-contato {
+    flex-wrap: nowrap;
+    left: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.conteudo-contato a img {
+    width: 15px;
+    height: auto;
+    border-radius: 15px;
+    position: absolute;
+    border-radius: 150px;
+    top: -10px;
+    left: 0.5px;
+    bottom: 5px;
+
+}
+
+.conteudo-contato a {
+    font-size: 1.4vw;
+    width: 100%;
+    margin: 20px auto;
+
+}
+
+.conteudo-contato a img {
+    font-size: 50px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+
+}
+
+#containerOptions .conteudo-contato a {
+    box-sizing: content-box;
+    font-size: 17px;
+    width: 110px;
+    position: relative;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 80px;
+    left: 5px;
+    margin-bottom: 7px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    height: 190px;
+
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(12, 40, 64);
+    visibility: visible
 }
