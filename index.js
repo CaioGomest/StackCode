@@ -88,15 +88,36 @@ for (let i = 0; i < button.length; i++) {
   button[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
 }
 
-const gotoPrev = () =>
-  current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+const gotoPrev = () => {
+  current = current > 0 ? current - 1 : slides.length - 1;
+  updateIndexes();
+  gotoNum(current);
+};
 
-const gotoNext = () => (current < 4 ? gotoNum(current + 1) : gotoNum(0));
+const gotoNext = () => {
+  current = current < slides.length - 1 ? current + 1 : 0;
+  updateIndexes();
+  gotoNum(current);
+};
+
+const updateIndexes = () => {
+  prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
+  next = current + 1 < slides.length ? current + 1 : 0;
+};
 
 const gotoNum = (number) => {
   current = number;
   prev = current - 1;
   next = current + 1;
+
+  // Verifique se os índices estão dentro dos limites válidos
+  if (prev < 0) {
+    prev = slides.length - 1;
+  }
+
+  if (next >= slides.length) {
+    next = 0;
+  }
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
@@ -104,15 +125,22 @@ const gotoNum = (number) => {
     slides[i].classList.remove("next");
   }
 
-  if (next == 2) {
-    next = 0;
-  }
-
-  if (prev == -1) {
-    prev = 4;
-  }
-
   slides[current].classList.add("active");
   slides[prev].classList.add("prev");
   slides[next].classList.add("next");
+
+  // Remova a classe "next" do slide atual, exceto quando for o último slide
+  if (current !== slides.length - 1) {
+    slides[current].classList.remove("next");
+  }
+
+  console.log(next);
 };
+
+// Atualize os índices prev e next para lidar corretamente com o último slide
+prev = current === 0 ? slides.length - 1 : current - 1;
+next = current === slides.length - 1 ? 0 : current + 1;
+
+// Atualize os índices prev e next para lidar corretamente com o último slide
+prev = slides.length - 1;
+next = current + 1;
