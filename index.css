@@ -19,8 +19,9 @@ body {
     /* O elemento é reposicionado para a posição original */}
 
 header {
-    height: 10vw;
+    height: 20vh;
     background-color: rgb(12, 40, 64);
+
    
 }
 .container-header {
@@ -31,10 +32,10 @@ header {
     align-items: center;
 }
 .logo {
-    width: 50%;
+    width: 40%;
 }
 .logo img {
-    max-width: 350px;
+    width: 100%;
 
 }
 .container-opcoes {
@@ -608,8 +609,7 @@ height: 100%;
    .button img {
        width: 30px;
    }
-}
-.dropdown {
+}.dropdown {
     position: relative;
     display: inline-block;
 
@@ -626,7 +626,6 @@ height: 100%;
     width: 110%;
     height: 0px;
     visibility: hidden;
-    position: absolute;
     background-color: rgb(12, 40, 64);
     border-radius: 10px;
     transition: 0.4s;
@@ -635,7 +634,9 @@ height: 100%;
     flex-direction: column;
     justify-content: space-around;
     margin: auto;
-    align-items:center ;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
 
 }
 
@@ -647,8 +648,6 @@ height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .conteudo-contato a img {
@@ -696,7 +695,7 @@ height: 100%;
 
 .dropdown:hover .dropdown-content {
     visibility: visible;
-    height: 190;
+    height: 190px;
 
 }
 
