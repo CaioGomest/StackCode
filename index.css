@@ -145,7 +145,7 @@ header {
 
 @media only screen and (max-width: 900px) {
 .logo {
-        width: 85%;
+        width: 65%;
     }
     body h1 {
         font-size: 1.5rem;
